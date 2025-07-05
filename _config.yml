@@ -1,0 +1,23 @@
+title: StableCoin Hub Blog
+description: Expert guides and analysis on stablecoins, DeFi, and digital finance
+baseurl: ""
+url: "https://blog.stablecoinhub.com"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Navigation
+header_pages:
+  - about.md
+
+# Permalink structure
+permalink: /:categories/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:title/
