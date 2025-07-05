@@ -2,17 +2,146 @@
 layout: default
 ---
 
-<div class="home">
-  <h1 class="page-heading">Latest Articles</h1>
-  
-  <div class="post-list">
-    {% for post in site.posts %}
-      <article class="post-preview">
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        <p class="post-meta">{{ post.date | date: "%B %d, %Y" }} • {{ post.categories | join: ", " }}</p>
-        <p>{{ post.description }}</p>
-        <a href="{{ post.url }}" class="read-more">Read More →</a>
-      </article>
-    {% endfor %}
-  </div>
+<!-- Hero Section -->
+<div class="gradient-bg rounded-xl p-8 sm:p-12 text-center text-white mb-8 fade-in">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-4">
+        Welcome to <span class="text-yellow-300">StableCoin Hub</span> Blog
+    </h1>
+    <p class="text-lg sm:text-xl text-white/90 mb-6 max-w-2xl mx-auto">
+        Expert guides, analysis, and insights on stablecoins, DeFi, and digital finance. 
+        Stay updated with the latest trends and strategies.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://stablecoinhub.pro" class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+            <i class="fas fa-home mr-2"></i>Explore Tools Directory
+        </a>
+        <a href="#latest" class="bg-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-600 transition">
+            <i class="fas fa-arrow-down mr-2"></i>Read Latest Articles
+        </a>
+    </div>
+</div>
+
+<!-- Stats -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+    <div class="bg-white rounded-lg p-6 text-center border shadow-sm">
+        <div class="text-2xl font-bold text-indigo-600 mb-1">{{ site.posts | size }}+</div>
+        <div class="text-gray-600 text-sm">Expert Articles</div>
+    </div>
+    <div class="bg-white rounded-lg p-6 text-center border shadow-sm">
+        <div class="text-2xl font-bold text-indigo-600 mb-1">95+</div>
+        <div class="text-gray-600 text-sm">Tools Covered</div>
+    </div>
+    <div class="bg-white rounded-lg p-6 text-center border shadow-sm">
+        <div class="text-2xl font-bold text-indigo-600 mb-1">Weekly</div>
+        <div class="text-gray-600 text-sm">New Content</div>
+    </div>
+</div>
+
+<!-- Featured Article -->
+{% assign featured_post = site.posts.first %}
+{% if featured_post %}
+<div class="bg-white rounded-xl shadow-sm border p-6 sm:p-8 mb-8" id="latest">
+    <div class="flex items-center mb-4">
+        <span class="bg-yellow-100 text-yellow-600 text-xs px-3 py-1 rounded-full font-medium mr-3">Featured</span>
+        <span class="text-gray-500 text-sm">{{ featured_post.date | date: "%B %d, %Y" }}</span>
+    </div>
+    
+    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+        <a href="{{ featured_post.url }}" class="hover:text-indigo-600 transition">{{ featured_post.title }}</a>
+    </h2>
+    
+    {% if featured_post.description %}
+    <p class="text-lg text-gray-600 mb-6">{{ featured_post.description }}</p>
+    {% endif %}
+    
+    <div class="flex flex-wrap gap-2 mb-6">
+        {% for category in featured_post.categories %}
+        <span class="bg-indigo-100 text-indigo-600 text-xs px-3 py-1 rounded-full">{{ category }}</span>
+        {% endfor %}
+        {% for tag in featured_post.tags limit:3 %}
+        <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">{{ tag }}</span>
+        {% endfor %}
+    </div>
+    
+    <a href="{{ featured_post.url }}" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition font-semibold">
+        Read Full Article <i class="fas fa-arrow-right ml-2"></i>
+    </a>
+</div>
+{% endif %}
+
+<!-- Categories Navigation -->
+<div class="bg-white rounded-xl shadow-sm border p-6 mb-8">
+    <h3 class="text-lg font-semibold mb-4">Browse by Category</h3>
+    <div class="flex flex-wrap gap-3">
+        {% assign categories = site.posts | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
+        {% for category in categories %}
+        {% assign posts_in_category = site.posts | where_exp: "post", "post.categories contains category" %}
+        <a href="/category/{{ category | downcase | replace: ' ', '-' }}" 
+           class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-indigo-100 hover:text-indigo-600 transition text-sm font-medium">
+            {{ category }} ({{ posts_in_category | size }})
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Latest Articles -->
+<div class="mb-8">
+    <h3 class="text-2xl font-bold text-gray-900 mb-6">Latest Articles</h3>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {% for post in site.posts limit:6 offset:1 %}
+        <article class="bg-white rounded-xl shadow-sm border p-6 hover:shadow-md transition">
+            <!-- Article Meta -->
+            <div class="flex items-center gap-3 mb-3">
+                {% for category in post.categories limit:1 %}
+                <span class="bg-indigo-100 text-indigo-600 text-xs px-3 py-1 rounded-full font-medium">{{ category }}</span>
+                {% endfor %}
+                <span class="text-gray-500 text-sm">{{ post.date | date: "%b %d, %Y" }}</span>
+                <span class="text-gray-500 text-sm">
+                    {% assign words = post.content | number_of_words %}
+                    {% assign minutes = words | divided_by: 200 %}
+                    {% if minutes < 1 %}1{% else %}{{ minutes }}{% endif %} min read
+                </span>
+            </div>
+            
+            <!-- Article Title -->
+            <h3 class="text-lg font-semibold text-gray-900 mb-3 hover:text-indigo-600 transition">
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </h3>
+            
+            <!-- Article Description -->
+            {% if post.description %}
+            <p class="text-gray-600 text-sm mb-4 line-clamp-3">{{ post.description }}</p>
+            {% endif %}
+            
+            <!-- Article Tags -->
+            <div class="flex flex-wrap gap-2 mb-4">
+                {% for tag in post.tags limit:3 %}
+                <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            
+            <!-- Read More -->
+            <a href="{{ post.url }}" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 text-sm font-medium">
+                Read Article <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+        </article>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Newsletter Signup -->
+<div class="bg-indigo-50 rounded-xl p-6 sm:p-8 text-center">
+    <h3 class="text-xl font-bold text-gray-900 mb-4">Stay Updated</h3>
+    <p class="text-gray-600 mb-6 max-w-md mx-auto">
+        Get the latest stablecoin insights and analysis delivered to your inbox weekly.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" placeholder="Enter your email" 
+               class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+        <button class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition font-semibold">
+            Subscribe
+        </button>
+    </div>
+    <p class="text-gray-500 text-xs mt-3">No spam. Unsubscribe anytime.</p>
 </div>
