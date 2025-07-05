@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<article class="prose prose-lg max-w-none">
+    <header class="mb-8">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ page.title }}</h1>
+        <div class="flex items-center text-gray-600 mb-6">
+            <span>{{ page.date | date: "%B %d, %Y" }}</span>
+            <span class="mx-2">•</span>
+            <span>{{ page.categories | join: ", " }}</span>
+        </div>
+        <p class="text-xl text-gray-600">{{ page.description }}</p>
+    </header>
+
+    <div class="article-content">
+        {{ content }}
+    </div>
+
+    <footer class="mt-12 pt-8 border-t">
+        <a href="/" class="text-indigo-600 hover:text-indigo-800">← Back to Blog</a>
+    </footer>
+</article>
