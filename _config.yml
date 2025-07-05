@@ -2,6 +2,7 @@ title: StableCoin Hub Blog
 description: Expert guides and analysis on stablecoins, DeFi, and digital finance
 baseurl: ""
 url: "https://blog.stablecoinhub.com"
+google_analytics: G-GX6EB7DSFL
 
 # Build settings
 markdown: kramdown
