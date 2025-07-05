@@ -23,17 +23,62 @@ This comprehensive guide analyzes every aspect of USDC vs USDT to help you make 
 
 <div class="comparison-section">
 
-| Feature | USDC | USDT |
-|---------|------|------|
-| **Market Cap** | ~$25B | ~$120B |
-| **Issuer** | Circle | Tether Ltd |
-| **Regulation** | Highly regulated (US) | Limited regulation |
-| **Backing** | 100% cash & equivalents | Mixed assets |
-| **Audit Frequency** | Monthly | Quarterly |
-| **Transparency** | High | Moderate |
-| **Exchange Support** | 100+ exchanges | 500+ exchanges |
-| **DeFi Integration** | Excellent | Excellent |
-| **Blockchain Support** | 15+ chains | 20+ chains |
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Feature</th>
+<th>USDC</th>
+<th>USDT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Market Cap</strong></td>
+<td>~$25B</td>
+<td>~$120B</td>
+</tr>
+<tr>
+<td><strong>Issuer</strong></td>
+<td>Circle</td>
+<td>Tether Ltd</td>
+</tr>
+<tr>
+<td><strong>Regulation</strong></td>
+<td>Highly regulated (US)</td>
+<td>Limited regulation</td>
+</tr>
+<tr>
+<td><strong>Backing</strong></td>
+<td>100% cash & equivalents</td>
+<td>Mixed assets</td>
+</tr>
+<tr>
+<td><strong>Audit Frequency</strong></td>
+<td>Monthly</td>
+<td>Quarterly</td>
+</tr>
+<tr>
+<td><strong>Transparency</strong></td>
+<td>High</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td><strong>Exchange Support</strong></td>
+<td>100+ exchanges</td>
+<td>500+ exchanges</td>
+</tr>
+<tr>
+<td><strong>DeFi Integration</strong></td>
+<td>Excellent</td>
+<td>Excellent</td>
+</tr>
+<tr>
+<td><strong>Blockchain Support</strong></td>
+<td>15+ chains</td>
+<td>20+ chains</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 
