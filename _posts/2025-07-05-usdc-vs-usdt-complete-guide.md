@@ -22,64 +22,62 @@ This comprehensive guide analyzes every aspect of USDC vs USDT to help you make 
 ## Quick Comparison Overview
 
 <div class="comparison-section">
-
-<table class="comparison-table">
+<table style="width: 100%; border-collapse: collapse; margin: 1rem 0; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
 <thead>
-<tr>
-<th>Feature</th>
-<th>USDC</th>
-<th>USDT</th>
+<tr style="background-color: #4F46E5;">
+<th style="color: white; padding: 12px 16px; text-align: left; font-weight: 600; border: none;">Feature</th>
+<th style="color: white; padding: 12px 16px; text-align: left; font-weight: 600; border: none;">USDC</th>
+<th style="color: white; padding: 12px 16px; text-align: left; font-weight: 600; border: none;">USDT</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong>Market Cap</strong></td>
-<td>~$25B</td>
-<td>~$120B</td>
+<tr style="background-color: white;">
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB; font-weight: 500;"><strong>Market Cap</strong></td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB;">~$25B</td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB;">~$120B</td>
 </tr>
-<tr>
-<td><strong>Issuer</strong></td>
-<td>Circle</td>
-<td>Tether Ltd</td>
+<tr style="background-color: #F8FAFC;">
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB; font-weight: 500;"><strong>Issuer</strong></td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB;">Circle</td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB;">Tether Ltd</td>
 </tr>
-<tr>
-<td><strong>Regulation</strong></td>
-<td>Highly regulated (US)</td>
-<td>Limited regulation</td>
+<tr style="background-color: white;">
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB; font-weight: 500;"><strong>Regulation</strong></td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB;">Highly regulated (US)</td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB;">Limited regulation</td>
 </tr>
-<tr>
-<td><strong>Backing</strong></td>
-<td>100% cash & equivalents</td>
-<td>Mixed assets</td>
+<tr style="background-color: #F8FAFC;">
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB; font-weight: 500;"><strong>Backing</strong></td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB;">100% cash & equivalents</td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB;">Mixed assets</td>
 </tr>
-<tr>
-<td><strong>Audit Frequency</strong></td>
-<td>Monthly</td>
-<td>Quarterly</td>
+<tr style="background-color: white;">
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB; font-weight: 500;"><strong>Audit Frequency</strong></td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB;">Monthly</td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB;">Quarterly</td>
 </tr>
-<tr>
-<td><strong>Transparency</strong></td>
-<td>High</td>
-<td>Moderate</td>
+<tr style="background-color: #F8FAFC;">
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB; font-weight: 500;"><strong>Transparency</strong></td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB;">High</td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB;">Moderate</td>
 </tr>
-<tr>
-<td><strong>Exchange Support</strong></td>
-<td>100+ exchanges</td>
-<td>500+ exchanges</td>
+<tr style="background-color: white;">
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB; font-weight: 500;"><strong>Exchange Support</strong></td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB;">100+ exchanges</td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB;">500+ exchanges</td>
 </tr>
-<tr>
-<td><strong>DeFi Integration</strong></td>
-<td>Excellent</td>
-<td>Excellent</td>
+<tr style="background-color: #F8FAFC;">
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB; font-weight: 500;"><strong>DeFi Integration</strong></td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB;">Excellent</td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #E5E7EB;">Excellent</td>
 </tr>
-<tr>
-<td><strong>Blockchain Support</strong></td>
-<td>15+ chains</td>
-<td>20+ chains</td>
+<tr style="background-color: white;">
+<td style="padding: 12px 16px; font-weight: 500;"><strong>Blockchain Support</strong></td>
+<td style="padding: 12px 16px;">15+ chains</td>
+<td style="padding: 12px 16px;">20+ chains</td>
 </tr>
 </tbody>
 </table>
-
 </div>
 
 ---
